@@ -1,0 +1,1 @@
+python ./halfsqueezenet_objdetect.py 2 --meta ./train_log/halfsqueezenet_objdetect1103-100111/graph-1103-100125.meta --model ./train_log/halfsqueezenet_objdetect1103-100111/model-9900.data-00000-of-00001 --output weights.npy

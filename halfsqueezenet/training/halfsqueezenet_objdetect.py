@@ -41,11 +41,11 @@ from evaluate import *
 DEMO_DATASET = 1
 
 if DEMO_DATASET == 0:
-	IMAGE_WIDTH = 640.0
-	IMAGE_HEIGHT = 360.0
+	IMAGE_WIDTH = 300.0
+	IMAGE_HEIGHT = 300.0
 else:
-	IMAGE_WIDTH = 640.0
-	IMAGE_HEIGHT = 480.0
+	IMAGE_WIDTH = 300.0
+	IMAGE_HEIGHT = 300.0
 
 
 BITW = 1
@@ -65,18 +65,7 @@ down_sample_factor = square_size/height_width
 
 
 classes = [
-	['boat',0],
-	['building',1],
-	['car',2],
-	['drone',3],
-	['group',4],
-	['horseride',5],
-	['paraglider',6],
-	['person',7],
-	['riding',8],
-	['truck',9],
-	['wakeboard',10],
-	['whale',11]
+	['film',0]
 ]
 
 def line_intersection_union(line1_min, line1_max, line2_min, line2_max):
@@ -405,7 +394,7 @@ def get_config():
 								ClassificationError('wrong-top1', 'val-error-top1')])
 				],
 			model=Model(),
-			max_epoch=150
+			max_epoch=5000
 		)
 	else:
 		return TrainConfig(
@@ -416,7 +405,7 @@ def get_config():
 				ScheduledHyperParamSetter('learning_rate', [(100, 0.001), (200, 0.0001), (250, 0.00001)])
 				],
 			model=Model(),
-			max_epoch=300
+			max_epoch=5000
 		)
 
 def run_image(model, sess_init, image_dir):
