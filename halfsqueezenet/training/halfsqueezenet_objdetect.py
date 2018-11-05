@@ -38,7 +38,7 @@ from tensorpack.utils.gpu import get_nr_gpu
 from dorefa import get_dorefa
 from evaluate import *
 
-DEMO_DATASET = 1
+DEMO_DATASET = 0
 
 if DEMO_DATASET == 0:
 	IMAGE_WIDTH = 300.0
@@ -51,7 +51,7 @@ else:
 BITW = 1
 BITA = 5
 BITG = 32
-BATCH_SIZE = 128
+BATCH_SIZE = 32#128
 
 MONITOR = 1
 REAL_IMAGE = 0
