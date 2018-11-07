@@ -51,7 +51,7 @@ else:
 BITW = 1
 BITA = 5
 BITG = 32
-BATCH_SIZE = 32#128
+BATCH_SIZE = 128
 
 MONITOR = 1
 REAL_IMAGE = 0
@@ -394,7 +394,7 @@ def get_config():
 								ClassificationError('wrong-top1', 'val-error-top1')])
 				],
 			model=Model(),
-			max_epoch=5000
+			max_epoch=10000
 		)
 	else:
 		return TrainConfig(
@@ -405,7 +405,7 @@ def get_config():
 				ScheduledHyperParamSetter('learning_rate', [(100, 0.001), (200, 0.0001), (250, 0.00001)])
 				],
 			model=Model(),
-			max_epoch=5000
+			max_epoch=10000
 		)
 
 def run_image(model, sess_init, image_dir):

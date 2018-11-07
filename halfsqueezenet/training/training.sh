@@ -1,1 +1,1 @@
-python ./halfsqueezenet_objdetect.py 1 --data ./dataset 2>&1 | tee ./log/train1.log
+python ./halfsqueezenet_objdetect.py 1 --data ./dataset_4 --gpu 0,1,2,3
